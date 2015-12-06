@@ -5,9 +5,9 @@
 const counter = (state = 0, action) => {
     switch (action.type) {
         case 'INCREMENT':
-            return state + 1;
+            return state + 5;
         case 'DECREMENT':
-            return state - 1;
+            return state - 5;
         default:
             return state;
     }
@@ -28,6 +28,7 @@ render();
 
 store.subscribe(() => {
     render();
+    console.log('debug' );
 });
 
 document.querySelector('.btn').addEventListener('click', () => {
